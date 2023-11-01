@@ -4,6 +4,16 @@
   <img src="https://github.com/team-i-Five/team-i-Five/assets/31847834/c018dd49-7e8d-4156-9274-d2043fa1694b" alt="i-5" width="300" height="300">
 </div>
 
+### Issues
+
+- 프로젝트 진행 상황 관리 및 관련 자료 첨부
+
+### Projects
+
+- 프로젝트 일정 관리
+
+<br>
+
 ## 프로젝트 소개
 
 - ### 👐 Team members 
@@ -16,10 +26,4 @@
 |강민정|Project coordinator||[minjung00](https://github.com/minjung00)|kmj931208@gmail.com|
 |박수빈|Project coordinator||[qkrtnqls1216](https://github.com/qkrtnqls1216)|qkrtnqls991216@gmail.com|
 
-### `Issues`
 
-- 프로젝트 진행 상황 관리 및 관련 자료 첨부
-
-### `Projects`
-
-- 프로젝트 일정 관리
