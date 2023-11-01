@@ -6,7 +6,7 @@
 
 - 팀원 인적사항
 
-|이름|전화번호|깃허브|개인 이메일|
+|이름|깃허브|개인 이메일|
 |---|:---|:---|
 |안인균|[aaingyunii](https://github.com/aaingyunii)|dlsrbs98@gmail.com|
 |김하현|[hxhkim](https://github.com/hxhkim)|hahyun.h.kim@gmail.com|
