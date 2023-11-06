@@ -20,10 +20,10 @@
 
 |이름|역할|개발파트|깃허브|개인 이메일|
 |---|:---|:---|:---|:---|
-|심재호|Project manager||[shims94](https://github.com/shims94)|shims94@gmail.com|
-|안인균|Tech leader||[aaingyunii](https://github.com/aaingyunii)|dlsrbs98@gmail.com|
-|김하현|Agile coach||[hxhkim](https://github.com/hxhkim)|hahyun.h.kim@gmail.com|
-|강민정|Project coordinator||[minjung00](https://github.com/minjung00)|kmj931208@gmail.com|
-|박수빈|Project coordinator||[qkrtnqls1216](https://github.com/qkrtnqls1216)|qkrtnqls991216@gmail.com|
+|심재호|Project manager|Front-End, Back-End|[shims94](https://github.com/shims94)|shims94@gmail.com|
+|안인균|Tech leader|Front-End, Back-End, Data|[aaingyunii](https://github.com/aaingyunii)|dlsrbs98@gmail.com|
+|김하현|Agile coach|Data-Collect|[hxhkim](https://github.com/hxhkim)|hahyun.h.kim@gmail.com|
+|강민정|Project coordinator|Machine-learning|[minjung00](https://github.com/minjung00)|kmj931208@gmail.com|
+|박수빈|Project coordinator|Machine-learning|[qkrtnqls1216](https://github.com/qkrtnqls1216)|qkrtnqls991216@gmail.com|
 
 
