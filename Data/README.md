@@ -2,9 +2,6 @@
 
 ### Code
 
-> **`Test{}__.ipynb`** : 각종 테스트 파일 <br/>
-> **`Production{}__.ipynb`** : 최종 실행 파일 <br/>
-
 > `Production1_get_all_detail.ipynb` ML 학습용 뮤지컬 상영 데이터 수집 코드 : 과거 상영작 20,499건, 현재 상영작 85건, 상영 예정작 395건 (2023.11.14. 기준) <br/>
 > `Production2_insert_ranking_db.ipynb` 수집한 데이터 AWS RDB 적재 코드  <br/>
 > `Production3_get_rank.py` 매일 갱신되는 뮤지컬 랭킹 Top 10 수집 airflow dag 파일
