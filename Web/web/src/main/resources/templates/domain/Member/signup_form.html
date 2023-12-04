@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragment/common :: head('회원가입', '/domain/Member/signup_form.css')}">
+</head>
+
+<body>
+    <!-- 상단 네비바 -->
+    <div class="container-sm">
+        <nav class="navbar fixed-top" th:replace="~{fragment/common_nav :: top-nav('signup')}"></nav>
+
+        <!-- 본문시작 -->
+        <form class="form-signin" th:action="@{/member/signup}" th:object="${memberCreateForm}" method="post" th:csrf>
+            <div class="form-wrap">
+                <div class="text-center mb">
+                    <img class="mb-4" src="/img/mumo_logo.png" alt="logo" id="logo-image">
+                </div>
+                <div th:replace="~{fragment/form_errors :: formErrorsFragment}"></div>
+                <div class="form-label-group">
+                    <label for="inputName" id="nameLabel">아이디</label>
+                    <input type="text" th:field="*{memberName}" id="inputName" class="form-signin">
+                </div>
+
+                <div class="form-label-group">
+                    <label for="inputEmail" id="emailLabel">이메일</label>
+                    <input type="email" th:field="*{email}" id="inputEmail" class="form-signin">
+                </div>
+
+                <div class="form-label-group">
+                    <label for="inputPassword" id="passwordLabel">비밀번호</label>
+                    <input type="password" th:field="*{password1}" id="inputPassword" class="form-signin">
+                </div>
+
+                <div class="form-label-group">
+                    <label for="inputPassword2" id="passwordLabel2">비밀번호 확인</label>
+                    <input type="password" th:field="*{password2}" id="inputPassword2" class="form-signin">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" id="signin-btn" type="submit"
+                    style="margin-top:1rem;">회원가입</button>
+                <p class="mt-3 text-muted text-center">Copyright &copy; team i-Five</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript  -->
+    <script src="/domain/Member/signin.js"></script>
+    <footer th:replace="~{fragment/common :: footer}"></footer>
+</body>
+
+</html>

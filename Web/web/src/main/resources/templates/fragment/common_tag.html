@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<body>
+    <div class="sub_container" th:fragment="tagList(tag1)">
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('love')"
+            th:if="${tag1 ne 'love'}">사랑</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('opera')"
+            th:if="${tag1 ne 'opera'}">오페라</button>
+
+        <!-- 태그 : 아이 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('child')"
+            th:if="${tag1 ne 'child'}">가족</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('friend')"
+            th:if="${tag1 ne 'friend'}">친구</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('art')"
+            th:if="${tag1 ne 'art'}">예술</button>
+
+        <!-- 태그 : 마법 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('magic')"
+            th:if="${tag1 ne 'magic'}">판타지</button>
+
+        <!-- 태그 : 사람 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('person')"
+            th:if="${tag1 ne 'person'}">휴머니즘</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('history')"
+            th:if="${tag1 ne 'history'}">역사</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('fear')"
+            th:if="${tag1 ne 'fear'}">공포</button>
+
+        <!-- 태그 : 웃음 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('laugh')"
+            th:if="${tag1 ne 'laugh'}">코미디</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag2('sad')"
+            th:if="${tag1 ne 'sad'}">슬픔</button>
+    </div>
+
+
+    <div class="sub_container" th:fragment="tagList2(tag1,tag2)">
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('love')"
+            th:if="${tag1 ne 'love' and tag2 ne 'love'}">사랑</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('opera')"
+            th:if="${tag1 ne 'opera' and tag2 ne 'opera'}">오페라</button>
+
+        <!-- 태그 : 아이 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('child')"
+            th:if="${tag1 ne 'child' and tag2 ne 'child'}">가족</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('friend')"
+            th:if="${tag1 ne 'friend' and tag2 ne 'friend'}">친구</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('art')"
+            th:if="${tag1 ne 'art' and tag2 ne 'art'}">예술</button>
+
+        <!-- 태그 : 마법 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('magic')"
+            th:if="${tag1 ne 'magic' and tag2 ne 'magic'}">판타지</button>
+
+        <!-- 태그 : 사람 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('person')"
+            th:if="${tag1 ne 'person' and tag2 ne 'person'}">휴머니즘</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('history')"
+            th:if="${tag1 ne 'history' and tag2 ne 'history'}">역사</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('fear')"
+            th:if="${tag1 ne 'fear' and tag2 ne 'fear'}">공포</button>
+
+        <!-- 태그 : 웃음 -->
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('laugh')"
+            th:if="${tag1 ne 'laugh' and tag2 ne 'laugh'}">코미디</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag3('sad')"
+            th:if="${tag1 ne 'sad' and tag2 ne 'sad'}">슬픔</button>
+    </div>
+</body>

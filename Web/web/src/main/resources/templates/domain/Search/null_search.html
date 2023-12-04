@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragment/common :: head('i-five','/domain/Search/search.css')}">
+</head>
+
+<body>
+    <nav th:replace="~{fragment/common_nav :: top-nav('i-five')}"></nav>
+
+
+    <div class="null-box">
+        <h1 class="text1">😢</h1>
+        <h2 class="text2">죄송합니다. 원하시는 뮤지컬 작품을 찾을 수 없습니다.</h2>
+        <h3 class="text3">이전 페이지로 돌아가서 다시 선택해주세요.</h3>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragment/common :: head('i-five','/domain/Tag/tag_list.css')}">
+</head>
+
+<body>
+    <nav class="navbar fixed-top"
+        th:replace="~{fragment/common_nav :: top-nav('i-five')}"></nav>
+        
+    <!---------------------- 태그3까지 선택 ---------------------->
+    <div class="container" style="margin-top: 100px;">
+        <h1>
+            <i class="fas fa-search" style="color: #747272; width:27px; height:auto;"></i> <!-- 돋보기 아이콘 -->
+            <span style="color: #747272;">선택된 테마 : </span>
+            <span th:text="${tagName1}" style="color: #f88100; font-weight: bold;"></span>
+            <span style="color: #747272;"> , </span>
+            <span th:text="${tagName2}" style="color: #f88100; font-weight: bold;"></span>
+            <span style="color: #747272;"> , </span>
+            <span th:if="${tagName3 != null}" th:text="${tagName3}" style="color: #f88100; font-weight: bold;"></span>
+        </h1>
+        <div class="list-image-container" th:replace="~{fragment/musical_list_slider :: musicalList()}"></div>
+        <div class th:replace="~{fragment/musical_list_slider :: sliders('4')}"></div>
+    </div>    
+
+    <script th:inline="javascript">
+        let musicals = /*[[ ${musicals} ]]*/[];
+    </script>
+    
+    <script src="/domain/Tag/tag_list.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<!-- head(타이틀제목, 페이지css따로없으면 null입력)-->
+
+<head th:fragment="head(title,pageCss)">
+    <!-- 로고 Font Awesome CDN 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- JQuery -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- 호출시 pageCss가 있다면(not null) 추가합니다-->
+    <link rel="stylesheet" type="text/css" th:if="${pageCss != null}" th:href="${pageCss}">
+    <link rel="stylesheet" type="text/css" th:if="${pageCss == null}" href="/global/index.css">
+
+    <link rel="stylesheet" type="text/css" href="/fragment/slider.css">
+    <link rel="stylesheet" type="text/css" href="/fragment/nav.css">
+
+
+    <title th:text="${title}"></title>
+    <style>
+        @font-face {
+            font-family: 'Noto Sans KR';
+            src: url('/fonts/NotoSansKR-Medium.woff') format('woff');
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .navbar-brand {
+            display: flex;
+            color: #F17F42;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            color: #000000;
+            font-size: 1.1rem;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <footer th:fragment="footer">
+        <!-- footer 내용 -->
+        <!-- Bootstrap Bundle -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    </footer>
+</body>
+
+</html>

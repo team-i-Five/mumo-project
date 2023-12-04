@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* 스타일 추가 */
+.card-header {
+    background-color: #FEF8D4;
+}
+
+.card {
+    border-radius: 5rem;
+}
+
+.card:hover {
+    background-color: #fff9c2;
+}
+
+/* 선택 버튼 */
+button.btn-outline-primary {
+    color: #f88100;
+    border-color: #f88100;
+}
+
+button.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #f88100;
+    border-color: #f88100;
+}

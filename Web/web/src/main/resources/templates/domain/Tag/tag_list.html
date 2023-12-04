@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head rel="stylesheet" th:replace="~{fragment/common :: head('i-five','/domain/Tag/tag_list.css')}">
+</head>
+
+<body>
+    <nav class="navbar fixed-top" th:replace="~{fragment/common_nav :: top-nav('')}"></nav>
+
+   <!----------------------태그1만 선택 ---------------------->
+    <div class="container" th:if="${tag2 == null && tag1 != null}" style="margin-top: 100px;">
+        <h1>
+            <i class="fas fa-search" style="color: #747272;"></i> <!-- 돋보기 아이콘 -->
+            <span style="color: #747272;">선택된 테마 : </span>
+            <span th:text="${tagName1}" style="color: #f88100; font-weight: bold;"></span>
+        </h1>
+        <div class="container" th:replace="~{fragment/common_tag :: tagList(${tag1})}"></div>
+        <div class="list-image-container" th:replace="~{fragment/musical_list_slider :: musicalList()}"></div>
+        <div class th:replace="~{fragment/musical_list_slider :: sliders('4')}"></div>
+    </div>
+    <!---------------------- 태그2까지 선택 ---------------------->
+    <div class="container" th:if="${tag1 != null && tag2 != null}" style="margin-top: 100px;">
+        <h1>
+            <i class="fas fa-search" style="color: #747272; width:27px; height:auto;"></i> <!-- 돋보기 아이콘 -->
+            <span style="color: #747272;">선택된 테마 : </span>
+            <span th:text="${tagName1}" style="color: #f88100; font-weight: bold;"></span>
+            <span style="color: #747272;"> , </span>
+            <span th:text="${tagName2}" style="color: #f88100; font-weight: bold;"></span>
+        </h1>
+        <div class="container" th:replace="~{fragment/common_tag :: tagList2(${tag1}, ${tag2})}"></div>
+        <div class="list-image-container" th:replace="~{fragment/musical_list_slider :: musicalList()}"></div>
+        <div th:replace="~{fragment/musical_list_slider :: sliders('4')}"></div>
+    </div>
+
+
+
+    <script th:inline="javascript">
+        let musicals = /*[[ ${musicals} ]]*/[];
+        const tag1 = /*[[${tag1}]]*/[];
+        const tag2 = /*[[${tag2}]]*/[];
+        const slideNum = /*[[${slideNum}]]*/ [];
+        console.log(slideNum);
+        console.log(tag1);
+        console.log(tag2); 
+    </script>
+
+    <script src="/domain/Tag/tag_list.js"></script>
+</body>
+
+</html>

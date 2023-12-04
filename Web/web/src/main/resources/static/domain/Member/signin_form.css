@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  background-color: #DBBD51;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+/* 입력창폼 */
+.form-signin {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  
+}
+/* 입력창 배경 */
+.form-wrap {
+  background-color: #FEF8D4;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 3rem;
+}
+/* 처음 로고이미지 */
+#logo-image {
+  width:15rem;
+  height:auto;
+  object-fit: cover;
+}
+/* 각라벨 + 인풋 */
+.form-label-group{
+  padding: .25rem;
+  color: #6C757D;
+}
+/* 라벨 */
+.form-label-group label{
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+/* 인풋 */
+.form-label-group input{
+  height: 2.5rem;
+  padding-left: 1rem;
+}
+/* 회원가입 버튼 */
+#signin-btn {
+  background-color : #F88100;
+  border-color: #F88100;
+}

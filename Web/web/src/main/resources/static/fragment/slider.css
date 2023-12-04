@@ -1,0 +1,93 @@
+/* -------------------여기서 부터 슬라이더 css------------------- */
+/* 여러개에서 고르는 슬라이더 */
+.slide-container {
+    height: 15rem;
+    width: 100%;
+}
+
+.slide-container li {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+
+    /* 이미지 크기 및 위치조정 */
+    width: auto !important;
+    height: 100%;
+
+    /* 이미지 중앙정렬을 하기 위함 */
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* ML추천시 5개중에 고르는 슬라이더 */
+#show-one {
+    margin: auto 4rem;
+}
+
+/* 각 슬라이드 이미지 타이틀 보이게 margin 조정 */
+.slick-track {
+    margin-bottom: 1.5rem;
+}
+
+/* 슬라이드 스크롤버튼 */
+.slick-prev:before,
+.slick-next:before {
+    font-size: 2.5rem;
+    color: #444444;
+}
+
+.slick-prev {
+    left: -2rem;
+    opacity: 0.3;
+}
+
+.slick-next {
+    right: -0.7rem;
+    opacity: 0.3;
+}
+
+#slider-image {
+    width: 230px;
+    height: 280px;
+}
+#slider-image-title {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+}
+
+#slider-image-title p {
+    text-align: center;
+}
+
+/* -------------------null tag 메세지 박스------------------- */
+.null-box {
+    line-height: 1.8;
+    text-align: center;
+    position: absolute;
+    top: 50%; /* 세로 가운데 정렬을 위해 top과 translate 사용 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    background-color: #FEF8D4;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.null-box .text1 {
+    font-size: 50px; /* 첫 번째 문장의 크기 설정 */
+    line-height: 1.5;
+}
+
+.null-box .text2 {
+    font-size: 35px; /* 두 번째 문장의 크기 설정 */
+    line-height: 1.5;
+}
+
+.null-box .text3 {
+    font-size: 27px; /* 두 번째 문장의 크기 설정 */
+    line-height: 1.5;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- 선택된 뮤지컬 정보, 초기값은 인덱스0 -->
+<div class="selected-container" th:fragment="musicalList()">
+    <div class="selected-image-wrap">
+        <img th:src="${musicals[0].getPosterUrl()}" alt="Image" id="selectedImage">
+    </div>
+    <!-- 추가된 테이블 -->
+    <div id="selectedInfo">
+        <div class="info-row">
+            <div class="column">제목</div>
+            <div class="musical_detail" th:text="${musicals[0].title}" id="selectedTitle"></div>
+        </div>
+
+        <div class="info-row">
+            <div class="column">장르</div>
+            <div class="musical_detail" th:text="${musicals[0].genre}" id="selectedGenre"></div>
+        </div>
+
+        <div class="info-row">
+            <div class="column">상영 기간</div>
+            <div class="musical_detail" th:text="${musicals[0].date}" id="selectedDate"></div>
+        </div>
+
+        <div class="info-row">
+            <div class="column">장소</div>
+            <div class="musical_detail" th:text="${musicals[0].location}" id="selectedLocation"></div>
+        </div>
+
+        <div class="info-row">
+            <div class="column">상영 시간</div>
+            <div class="musical_detail" th:text="${musicals[0].runningTime}" id="selectedRunning"></div>
+        </div>
+
+        <div class="column">줄거리</div>
+        <div class="musical_detail" th:text="${musicals[0].synopsis}" id="selectedSys"></div>
+        
+        <div class="musical_btn_description">
+            <form id="recommendForm" method="post" th:action="@{/result/ml}" th:csrf>
+                <input type="hidden" name="id" id="musicalIdInput" />
+                <input type="hidden" name="title" id="musicalTitleInput" />
+
+                <button class="musical_btn" onclick="recommendSimilar()">
+                    해당 작품과 <span class="bold-text">비슷한 작품</span> 추천받기
+                </button>
+            </form>
+            <div id="musicalIdContainer" data-musical-id="${musicals[0].musicalId}"></div>
+        </div>
+    </div>
+    <script src="/fragment/musical_info.js"></script>
+</div>
+
+<!-- 슬라이더 영역 시작 -->
+<div class="slide-container" th:fragment="sliders(num)" style="margin-top:10px;">
+    <!-- num이 4일때 여기만 출력 -->
+    <div class="show-slides" th:if="${num == '4'}">
+        <div th:each="musicalDTO : ${musicals}">
+            <!-- 각 MusicalDTO의 속성에 접근 -->
+            <li style="list-style: none;">
+                <div style="position: relative;">
+                    <img th:src="${musicalDTO.getPosterUrl()}" alt="Image" data-index="${musicalDTO.index}"
+                        id="slider-image">
+                    <div id="slider-image-title">
+                        <p th:text="${musicalDTO.getTitle()}" style="margin: 0;"></p>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </div>
+    <!-- num이 1일때 여기만 출력 -->
+    <div class="show-one-slide" th:if="${num == '1'}">
+        <div th:each="musicalDTO : ${musicals}" style="text-align: center;">
+            <!-- 각 MusicalDTO의 속성에 접근 -->
+            <li style="list-style: none;" id="show-one">
+                <div style="position: relative;  ">
+                    <img th:src="${musicalDTO.getPosterUrl()}" alt="Image" data-index="${musicalDTO.index}"
+                        id="slider-image">
+                </div>
+            </li>
+        </div>
+    </div>
+    <script src="/fragment/slider.js"></script>
+</div>

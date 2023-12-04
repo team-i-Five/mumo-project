@@ -1,0 +1,135 @@
+/* -------------------container detail css------------------- */
+.navbar {
+    color: #141517;
+    background-color: #141517;
+}
+
+.body {
+    display: block;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+.sub_container {
+    text-align: center;
+}
+
+
+/* ------------------- 태그 관련 css ------------------- */
+/*태그 버튼*/
+.btn {
+    margin-bottom: 10px;
+    background-color: #f88100;
+    border: 2px solid #f88100; /* 테두리 스타일 추가 및 색상 지정 */
+    border-radius:15px; /* 버튼의 둥근 모서리를 세로로 설정 */
+    padding: 10px 15px; /* 버튼 내부 여백 조절 */
+    margin: 15px 2px; /* 위아래 여백 10px, 좌우 여백 5px */
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*태그 버튼 선택 시*/
+.btn:hover{
+    background-color: #ffffff; /* 커서를 올렸을 때 배경색 */
+    color: #f88100; /* 커서를 올렸을 때 텍스트 색상 */
+    border-color: #f88100 !important; /* 커서를 올렸을 때 테두리 색상 */
+}
+
+/*선택된 태그*/
+.container h1 {
+    display: inline-block; /* 요소를 인라인 블록으로 변경하여 컨테이너 크기에 맞게 설정합니다. */
+    padding: 10px 20px; /* 내부 여백을 추가하여 텍스트 주변에 여백을 만듭니다. */
+    background-color: #ffffff; /* 흰색 배경으로 변경합니다. */
+    border-radius: 45px; /* 모서리를 둥글게 설정합니다. */
+    width: 100%; /* 화면의 100%를 차지하도록 설정 */
+    margin: 5px auto 5px; /* 위 20px, 아래 100px, 좌우 가운데 정렬 */
+    border: 2px solid #f88100; /* 테두리 스타일을 추가하고 오렌지색으로 설정합니다. */
+    font-size: 20px; /* 글꼴 크기를 조정합니다. */
+}
+
+/* -------------------노출되는 뮤지컬 정보 관련 css------------------- */
+/* 선택된 뮤지컬 이미지 영역 부모 컨테이너 */
+.selected-container {
+    display: flex;
+    align-items: flex-start; /* 이미지를 위로 정렬 */
+    max-height: 70%;
+}
+
+.selected-image-wrap {
+    background-color: #FFFFFF;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+/* 선택된 뮤지컬 이미지 */
+#selectedImage {
+    width: 450px; /* 이미지 고정 너비 */
+    height: auto; /* 높이 자동 조정 */
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* 선택된 뮤지컬 디테일 영역 */
+#selectedInfo {
+    margin-left:1.5rem;
+    flex: 1; /* 나머지 공간을 채우도록 설정 */
+}
+
+.info-row {
+    display: flex;
+}
+
+/* 컬럼 */
+.column {
+    font-size: 18px;
+    color: #f88100;
+    font-weight: bold;
+    margin-bottom: 5px; /* 각 컬럼 사이 간격 설정 */
+    width: 80px auto; /* 컬럼의 고정 너비 설정 */
+    flex:2;
+}
+
+/* 각 상세 정보에 대한 내용 */
+.musical_detail {
+    flex:10;
+}
+
+/* 줄거리 영역 */
+#selectedSys {
+    margin-left: 2rem;
+    margin-right: 7rem;
+    overflow: auto; /* 내용이 넘칠 때 스크롤이 표시되도록 설정 */
+    height: 18rem; /* 스크롤 창의 최대 높이를 설정 (원하는 값으로 조절) */
+}
+
+/*------------------------유사한 작품 추천 버튼----------------------*/
+.musical_btn {
+    background-color: #FEDC98; /* 버튼 배경색 */
+    border: 3px solid #FEDC98; /* 버튼 테두리 */
+    color: #000000; /* 버튼 텍스트 색상 (검은색) */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 25px;
+    font-size: 22px; /* 버튼 텍스트 크기 조정 */
+    display: block;/*중앙*/
+    margin: 1.1rem 7rem 1.1rem 0rem; /* 상->우->하->좌 : 시계 방향 */
+    padding: 10px 15px; /* 내부 여백을 상하, 좌우 조정 */
+    width: 80%;
+}
+
+.musical_btn:hover {
+    background-color: #ffffff; /* 커서를 올렸을 때 배경색 */
+    color: #000000; /* 커서를 올렸을 때 텍스트 색상 */
+    border-color: #FEDC98; /* 커서를 올렸을 때 테두리 색상 */
+}
+
+.bold-text {
+    font-weight: bold; /* 해당 요소의 글씨를 굵게 설정합니다. */
+}
+
+
+

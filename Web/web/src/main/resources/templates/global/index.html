@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragment/common :: head('i-Five 뮤지컬 프로젝트','global/index.css')}">
+</head>
+<body>
+    <!-- 상단 네비바 -->
+    <nav th:replace="~{fragment/common_nav :: top-nav('home')}">
+    </nav>
+    <!-- 본문시작 -->
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body" onclick="goNext1()">
+                    <h1 class="card-title pricing-card-title"><br>뮤지컬 처음 봐요!</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li><span style="color:#FF8000;font-weight:bold;"><br>뮤지컬을 처음 접하는 분들을 위한 특별한 추천</span></li>
+                        <li>선호하는 테마를 선택하고, 그에 맞는 작품을 발견해보세요!<br><br></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm" sec:authorize="isAuthenticated()" onclick="goNext2()">
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><br>뮤지컬 본 적 있어요!</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li><span style="color:#FF8000; font-weight:bold;"><br>이미 뮤지컬의 매력을 알고 계신 분들을 위한 특별한 추천</span>
+                        </li>
+                        <li>비슷한 스토리나 무대 매력을 가진 현재 작품을 추천해드릴게요!<br><br></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/global/index.js"></script>
+    <footer th:replace="~{fragment/common :: footer}"></footer>
+</body>
+
+</html>

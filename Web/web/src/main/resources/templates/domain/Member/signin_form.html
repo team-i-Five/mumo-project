@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragment/common :: head('로그인', '/domain/Member/signin_form.css')}">
+</head>
+
+<body>
+    <!-- 상단 네비바 -->
+    <div class="container-sm">
+        <nav class="navbar fixed-top" th:replace="~{fragment/common_nav :: top-nav('signin')}"></nav>
+
+        <!-- 본문시작 -->
+        <form th:action="@{/member/signin}" class="form-signin" method="post">
+            <div class="form-wrap">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="/img/mumo_logo.png" alt="logo" id="logo-image">
+                </div>
+                <div th:if="${param.error}"> <!-- param.error값이 있으면 -->
+                    <div class="alert alert-danger">
+                        아이디 또는 비밀번호가 틀렸습니다.
+                    </div>
+                </div>
+                <div class="form-label-group">
+                    <label for="memberName" id="nameLabel">아이디</label>
+                    <input type="text" name="memberName" id="inputName" class="form-signin">
+                </div>
+                <div class="form-label-group">
+                    <label for="password" id="passwordLabel">비밀번호</label>
+                    <input type="password" name="password" id="inputPassword" class="form-signin">
+                </div>
+
+                <!-- sign in 으로 사용하지만 사용자가 알기 쉽게 로그인으로 텍스트로 사용 -->
+                <button class="btn btn-lg btn-primary btn-block" id="signin-btn" type="submit" style="margin-top:1rem;">로그인</button>
+                <p class="mt-3 text-muted text-center">Copyright &copy; team i-Five</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript  -->
+    <script src="/domain/Member/signin.js"></script>
+
+    <footer th:replace="~{fragment/common :: footer}"></footer>
+</body>
+
+</html>

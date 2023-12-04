@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragment/common :: head(' 인터파크 랭킹 | 뮤모 ','/domain/Rank/rank.css')}">
+</head>/
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+        th:replace="~{fragment/common_nav :: top-nav('rank')}"></nav>
+
+
+    <div class="ranking">
+        <div class="head-message">이미지를 클릭하면 해당 예매 페이지로 이동합니다.</div>
+        <div class="head">
+            <h1 class="site_title">인터파크 랭킹</h1>
+            <div class="today_date">
+                <div class="arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <h3 th:text="${today}"></h3>
+                <div class="arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="site_list">
+                <div class="site_tab_list" data-tiara-layer="select">
+                    <a href="/rank/interpark" class="site_tab" aria-selected="true">인터파크</a>
+                    <a href="/rank/ticketlink" class="site_tab">티켓링크</a>
+                    <a href="/rank/yes24" class="site_tab">예스24티켓</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ranking_contents_container">
+            <!-- Thymeleaf의 th:each로 각 musicals를 iterStat을 사용하여 순회 -->
+            <div th:each="musicals : ${mrd}" class="ranking_contents">
+                <!-- 각 MusicalDTO의 속성에 접근하여 이미지와 제목을 출력 -->
+                <a th:href="${musicals.goodsUrl}" target="_blank">
+                    <img th:src="${musicals.posterUrl}" alt="Image" class="ranking_contents_img">
+                    <div class="ranking_contents_text">
+                        <div class="rank_num" th:text="${musicals.ranking}"></div>
+                        <p class="musical_title" th:text="${musicals.title}"></p>
+                        <p class="musical_location" th:text="${musicals.location}"></p>
+                        <p class="musical_duration" th:text="${musicals.date}"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

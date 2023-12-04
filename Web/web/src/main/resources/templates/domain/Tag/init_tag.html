@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragment/common :: head('i-Five 뮤지컬 프로젝트','/domain/Tag/init_tag.css')}">
+</head>
+
+<body>
+    <!-- 상단 네비바 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="~{fragment/common_nav :: top-nav('home')}">
+    </nav>
+
+    <!-- 본문시작 -->
+    <div class="container">
+        <!-- 테마 선택하기 박스 -->
+        <div class="theme-info text-center">
+            <h1>테마 선택하기</h1>
+            <p>즐겨찾는 테마를 골라보세요. 선택하신 테마에 맞는 뮤지컬 작품들을 추천해드릴게요!</p>
+        </div>
+
+        <!-- 버튼들을 담을 컨테이너 -->
+        <div class="btn-container">
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('love')">사랑</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('opera')">오페라</button>
+            
+            <!-- 태그 : 아이 -->
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('child')">가족</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('friend')">친구</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('art')">예술</button>
+
+            <!-- 태그 : 마법 -->
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('magic')">판타지</button>
+            
+            <!-- 태그 : 사람 -->
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('person')">휴머니즘</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('history')">역사</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('fear')">공포</button>
+
+            <!-- 태그 : 웃음 -->
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('laugh')">코미디</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="redirectToUrlWithTag1('sad')">슬픔</button>
+        </div>
+    </div>
+    
+    <script src="/domain/Tag/tag_list.js"></script>
+    <footer th:replace="~{fragment/common :: footer}"></footer>
+</body>
+
+</html>

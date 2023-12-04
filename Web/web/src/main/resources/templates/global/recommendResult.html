@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<link rel="stylesheet" href="/css/list.css" th:replace="~{fragment/common :: head('i-five','/global/recommendResult.css')}">
+</head>
+
+<body>
+    <nav class="navbar fixed-top"
+        th:replace="~{fragment/common_nav :: top-nav('i-five')}"></nav>
+        
+    <!---------------------- 과거 뮤지컬에서 선택한 것으로 부터 나온 추천작 ---------------------->
+    <div class="container" style="margin-top: 100px;">
+        <h1>
+            <!-- 체크박스 아이콘 추가 -->
+            <i class="fas fa-check-square" style="color: #747272;"></i>
+            <span style="color: #747272;">선택한 뮤지컬 명 : </span>
+            <span th:text="${title}" style="color: #f88100; font-weight: bold;"></span>
+        </h1>
+        <!-- 선택된 뮤지컬 정보, 초기값은 인덱스0 -->
+        <div class="selected-container" th:fragment="musicalList()">
+            <div class="selected-image-wrap">
+                <img th:src="${musicals[0].getPosterUrl()}" alt="Image" id="selectedImage">
+            </div>
+                <!-- 추가된 테이블 -->
+            <div id="selectedInfo">
+                <div class="info-row">
+                    <div class="column">제목</div>
+                    <div class="musical_detail" th:text="${musicals[0].title}" id="selectedTitle"></div>
+                </div>
+        
+                <div class="info-row">
+                    <div class="column">장르</div>
+                    <div class="musical_detail" th:text="${musicals[0].genre}" id="selectedGenre"></div>
+                </div>
+        
+                <div class="info-row">
+                    <div class="column">상영 기간</div>
+                    <div class="musical_detail" th:text="${musicals[0].date}" id="selectedDate"></div>
+                </div>
+        
+                <div class="info-row">
+                    <div class="column">장소</div>
+                    <div class="musical_detail" th:text="${musicals[0].location}" id="selectedLocation"></div>
+                </div>
+        
+                <div class="info-row">
+                    <div class="column">상영 시간</div>
+                    <div class="musical_detail" th:text="${musicals[0].runningTime}" id="selectedRunning"></div>
+                </div>
+
+                <div class="column">줄거리</div>
+                <div class="musical_detail"  th:text="${musicals[0].synopsis}" id="selectedSys"></div>
+                <br>
+            </div>
+        </div>
+        <div class th:replace="~{fragment/musical_list_slider :: sliders('4')}"></div>  
+    </div>
+    <script th:inline="javascript">
+        let musicals = /*[[ ${musicals} ]]*/[];
+    </script>
+    <script src="/fragment/musical_info.js"></script>
+</body>
+</html>
