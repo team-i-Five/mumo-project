@@ -4,7 +4,6 @@
   <img src="https://github.com/team-i-Five/team-i-Five/assets/31847834/c018dd49-7e8d-4156-9274-d2043fa1694b" alt="i-5" width="300" height="300">
 </div>
 
-<iframe width="1207" height="619" src="https://www.youtube.com/embed/etKlWn6jU4I" title="뮤지컬 추천 웹사이트제작 프로젝트 mumo (team i-Five 시연영상)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ### **mumo 프로젝트 v1 최종산출물 코드 집합입니다.**
@@ -13,15 +12,11 @@
 1. 데이터를 적재 및 가져올 `MySQL DB`의 엔드포인트가 필요합니다. web폴더의 web\src\main\resources밑에 `application-aws.properties`를 만드셔서 `my sql` DB를 연결해주세요.
 2. `ML` 폴더안에있는 도커이미지를 이용해서, 도커컨테이너를 생성하시고 `application-aws.properties`내에 `ml_url=생성한 도커컨테이너 url`을 작성해주세요. 
 
-### Issues
+## 프로젝트 시연 영상(이미지 클릭시 Youtube 이동)
 
-- 프로젝트 진행 상황 관리 및 관련 자료 첨부
+[![Video Label](http://img.youtube.com/vi/etKlWn6jU4I/0.jpg)](https://youtu.be/etKlWn6jU4I)
 
-### Projects
 
-- 프로젝트 일정 관리
-
-<br>
 
 ## 프로젝트 소개
 
